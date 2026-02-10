@@ -1,0 +1,85 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "nanobot: onboard",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["onboard"]
+    },
+    {
+      "name": "nanobot: agent (-m)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["agent", "-m", "你好"]
+    },
+    {
+      "name": "nanobot: agent interactive (--logs)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["agent", "--logs"]
+    },
+    {
+      "name": "nanobot: agent (-m --no-markdown --logs)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["agent", "-m", "Hello", "--no-markdown", "--logs"]
+    },
+    {
+      "name": "nanobot: gateway (--verbose)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["gateway", "--verbose"]
+    },
+    {
+      "name": "nanobot: status",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["status"]
+    },
+    {
+      "name": "nanobot: channels status",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["channels", "status"]
+    },
+    {
+      "name": "nanobot: channels login",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "nanobot",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["channels", "login"]
+    }
+  ]
+}
