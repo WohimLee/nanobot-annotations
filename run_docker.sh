@@ -1,5 +1,7 @@
 
 docker build -t nanobot:local -f Dockerfile .
+docker build -t nanobot:local -f Dockerfile.dev .
+
 
 # 运行时注入 .env（推荐）
 docker run --rm \
@@ -15,6 +17,16 @@ docker run -d \
   -p 18790:18790 \
   -p 20000:22 \
   nanobot:local gateway
+
+docker run -d \
+  --name nanobot \
+  --env-file .env \
+  -v ~/.nanobot:/root/.nanobot \
+  -p 18790:18790 \
+  -p 20000:22 \
+  --entrypoint /bin/bash \
+  nanobot:local \
+  -lc "/etc/init.d/ssh start && tail -f /dev/null"
 
 docker exec -it nanobot bash
 
